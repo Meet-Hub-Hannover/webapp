@@ -1,0 +1,20 @@
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'jetty'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.7
+version = '1.0'
+
+tasks.withType(Compile) {
+    options.encoding = 'UTF-8'
+}
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    providedCompile 'javax.servlet:servlet-api:2.5'
+    compile 'org.mnode.ical4j:ical4j:1.0.6'
+    testCompile 'junit:junit:4.+'
+}

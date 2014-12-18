@@ -1,0 +1,46 @@
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee">
+    <context-param>
+        <description>Verzeichnis mit den XML-Dateien fuer die UGs</description>
+        <param-name>usergroup.directory</param-name>
+        <param-value>C:\workspace\Meethub-Hannover\testdata\usergroup</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>mergedCalendar</servlet-name>
+        <servlet-class>de.meethub.mergedCalendar.MergedCalendarServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ical2json</servlet-name>
+        <servlet-class>de.meethub.ical2json.JsonEventsServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>index</servlet-name>
+        <servlet-class>de.meethub.site.IndexServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>adapter_agilewh</servlet-name>
+        <servlet-class>de.meethub.adapters.agilewh.AgilewhAdapterServlet</servlet-class>
+        <init-param>
+            <param-name>base-url</param-name>
+            <param-value>http://www.agilewh.de/themenbacklog/</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>mergedCalendar</servlet-name>
+        <url-pattern>/mergedCalendar.ics</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ical2json</servlet-name>
+        <url-pattern>/mergedCalendar.json</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>index</servlet-name>
+        <url-pattern>/index.html</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>adapter_agilewh</servlet-name>
+        <url-pattern>/agilewh.ics</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+</web-app>

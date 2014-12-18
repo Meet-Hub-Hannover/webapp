@@ -1,0 +1,29 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Meet-Hub Hannover: Kalenderansicht</title>
+    <link rel='stylesheet' href='fullcalendar-2.2.3/fullcalendar.css' />
+    <script src='fullcalendar-2.2.3/lib/jquery.min.js'></script>
+    <script src='fullcalendar-2.2.3/lib/moment.min.js'></script>
+    <script src='fullcalendar-2.2.3/fullcalendar.js'></script>
+    <script src='fullcalendar-2.2.3/lang/de.js'></script>
+    <script>
+        $(document).ready(function() {
+            // page is now ready, initialize the calendar...
+            $('#calendar').fullCalendar({
+                // put your options and callbacks here
+                events: 'mergedCalendar.json',
+                color: 'yellow',
+                textColor: 'black'
+            })
+        
+        });
+    </script>
+</head>
+<body>
+    <div id='calendar'></div>
+    <a href="index.html" style="font-family:sans">Zurück zur Hauptseite</a>
+</body>
+</html>
