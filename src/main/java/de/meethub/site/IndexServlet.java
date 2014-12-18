@@ -90,7 +90,7 @@ public class IndexServlet extends HttpServlet {
             "            <div class=\"column_12 color dark\">\r\n" +
             "                <h1 class=\"text book color theme\">Weitere Links</h1>\r\n" +
             "                <a href=\"http://ugrm.coderbyheart.de\" class=\"text bold color theme\">ugrm</a>: eine vergleichbare Initiative für die Region Rhein-Main<br/>\r\n" +
-            "                <a href=\"https://github.com/tobiasbaum\" class=\"text bold color theme\">github.com/tobiasbaum</a>: Repository für diese Seite und das zugrundeliegende Framework<br/>\r\n" +
+            "                <a href=\"https://github.com/Meet-Hub-Hannover\" class=\"text bold color theme\">github.com/Meet-Hub-Hannover</a>: Repository für diese Seite und die zugrundeliegende Web-Anwendung<br/>\r\n" +
             "            </div>\r\n" +
             "        </div>\r\n" +
             "    </section>\r\n" +
