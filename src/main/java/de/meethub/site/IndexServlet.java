@@ -30,7 +30,7 @@ public class IndexServlet extends HttpServlet {
     protected void doGet(final HttpServletRequest request, final HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        final Calendar mergedCalendar = CalendarUtil.loadMergedCalendar();
+        final Calendar mergedCalendar = CalendarUtil.loadMergedCalendar(this.getServletContext());
         final Period nextPeriod = new Period(new DateTime(), new Dur(1));
         final String content =
             "<!doctype html>\r\n" +
@@ -48,7 +48,7 @@ public class IndexServlet extends HttpServlet {
             "    <section class=\"bck theme landing text center\">\r\n" +
             "        <div class=\"row\">\r\n" +
             "            <div class=\"column_12\">\r\n" +
-            "                <h1>Meet-Hub Hannover</h1>\r\n" +
+            "                <img src=\"meethub2.png\" width=\"70%\" alt=\"Meet-Hub Hannover\" />\r\n" +
             "            </div>\r\n" +
             "        </div>\r\n" +
             "    </section>\r\n" +
@@ -98,7 +98,7 @@ public class IndexServlet extends HttpServlet {
             "    <footer class=\"padding align center text small bck dark\">\r\n" +
             "        <div class=\"row\">\r\n" +
             "            <div class=\"column_12\">\r\n" +
-            "                <p>Meet-Hub Hannover ist eine Initiative von <a href=\"http://www.jug-h.de\" class=\"text bold color theme\">JUG Hannover</a> und <a href=\"http://https://www.softwerkskammer.org/groups/hannover\" class=\"text bold color theme\">Softwerkskammer Hannover</a></p>\r\n" +
+            "                <p>Meet-Hub Hannover ist eine Initiative von <a href=\"http://https://www.softwerkskammer.org/groups/hannover\" class=\"text bold color theme\">Softwerkskammer Hannover</a> und <a href=\"http://www.jug-h.de\" class=\"text bold color theme\">JUG Hannover</a></p>\r\n" +
             "                <a href=\"impressum.html\" class=\"text bold color theme\">Impressum</a>\r\n" +
             "            </div>\r\n" +
             "        </div>\r\n" +

@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.io.Reader;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
@@ -64,18 +63,6 @@ public class MergedCalendarServlet extends HttpServlet {
             }
         }
         return urls;
-    }
-
-    private void dumpUrl(final URL url, final PrintWriter out) throws IOException {
-        final URLConnection conn = url.openConnection();
-        try (InputStream in = conn.getInputStream()) {
-            final String encoding = conn.getContentEncoding();
-            final Reader r = new InputStreamReader(in, encoding == null ? DEFAULT_CHARSET : encoding);
-            int b;
-            while ((b = r.read()) >= 0) {
-                out.write(b);
-            }
-        }
     }
 
     private Calendar mergeCalendars(final List<Pair<URL, Group>> urls) throws URISyntaxException {

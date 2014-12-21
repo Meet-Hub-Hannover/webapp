@@ -32,7 +32,7 @@ public class JsonEventsServlet extends HttpServlet {
             final Period period = new Period(
                     new DateTime(df.parse(request.getParameter("start"))),
                     new DateTime(df.parse(request.getParameter("end"))));
-            final Calendar c = CalendarUtil.loadMergedCalendar();
+            final Calendar c = CalendarUtil.loadMergedCalendar(this.getServletContext());
 
             final PrintWriter out = response.getWriter();
             boolean first = true;

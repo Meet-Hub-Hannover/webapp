@@ -4,6 +4,12 @@
         <param-name>usergroup.directory</param-name>
         <param-value>C:\workspace\Meethub-Hannover\testdata\usergroup</param-value>
     </context-param>
+    <context-param>
+        <description>Basis-URL, unter der der Service sich selbst erreicht</description>
+        <param-name>root.url</param-name>
+        <param-value>http://localhost:8080/Meethub-Hannover/</param-value>
+    </context-param>
+    
     <servlet>
         <servlet-name>mergedCalendar</servlet-name>
         <servlet-class>de.meethub.mergedCalendar.MergedCalendarServlet</servlet-class>
@@ -24,6 +30,14 @@
             <param-value>http://www.agilewh.de/themenbacklog/</param-value>
         </init-param>
     </servlet>
+    <servlet>
+        <servlet-name>adapter_swk</servlet-name>
+        <servlet-class>de.meethub.adapters.swk.SwkAdapterServlet</servlet-class>
+        <init-param>
+            <param-name>base-url</param-name>
+            <param-value>https://www.softwerkskammer.org/activities/ical/</param-value>
+        </init-param>
+    </servlet>
     <servlet-mapping>
         <servlet-name>mergedCalendar</servlet-name>
         <url-pattern>/mergedCalendar.ics</url-pattern>
@@ -39,6 +53,10 @@
     <servlet-mapping>
         <servlet-name>adapter_agilewh</servlet-name>
         <url-pattern>/agilewh.ics</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>adapter_swk</servlet-name>
+        <url-pattern>/swk.ics</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
