@@ -13,6 +13,7 @@ import net.fortuna.ical4j.model.Component;
 import net.fortuna.ical4j.model.Period;
 import net.fortuna.ical4j.model.PeriodList;
 import net.fortuna.ical4j.model.Property;
+import net.fortuna.ical4j.model.component.VEvent;
 
 public class Event implements Comparable<Event> {
 
@@ -33,6 +34,9 @@ public class Event implements Comparable<Event> {
         final List<Component> filtered = (List<Component>) filter.filter(cal.getComponents());
         final List<Event> ret = new ArrayList<>();
         for (final Component comp : filtered) {
+            if  (!(comp instanceof VEvent)) {
+                continue;
+            }
             final PeriodList recurrenceSet = comp.calculateRecurrenceSet(period);
             for (final Object p : recurrenceSet) {
                 ret.add(new Event(
