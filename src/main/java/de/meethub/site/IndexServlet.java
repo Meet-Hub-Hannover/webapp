@@ -39,6 +39,7 @@ public class IndexServlet extends HttpServlet {
             "    <meta charset=\"utf-8\" />\r\n" +
             "    <title>Meet-Hub Hannover</title>\r\n" +
             "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\" />\r\n" +
+            "    <link rel=\"shortcut icon\" href=\"favicon.ico\" />" +
             "    <link rel=\"stylesheet\" href=\"tuktuk/tuktuk.css\">\r\n" +
             "    <link rel=\"stylesheet\" href=\"tuktuk/tuktuk.theme.default.css\">\r\n" +
             "    <!-- TUKTUK.WIDGETS -->\r\n" +
@@ -48,7 +49,7 @@ public class IndexServlet extends HttpServlet {
             "    <section class=\"bck theme landing text center\">\r\n" +
             "        <div class=\"row\">\r\n" +
             "            <div class=\"column_12\">\r\n" +
-            "                <img src=\"meethub2.png\" width=\"70%\" alt=\"Meet-Hub Hannover\" />\r\n" +
+            "                <img src=\"meethub2.svg\" width=\"70%\" alt=\"Meet-Hub Hannover\" />\r\n" +
             "            </div>\r\n" +
             "        </div>\r\n" +
             "    </section>\r\n" +
@@ -71,7 +72,7 @@ public class IndexServlet extends HttpServlet {
             "                <h1 class=\"text book color theme\">Was ist Meet-Hub?</h1>\r\n" +
             "                Ziel von \"Meet-Hub Hannover\" ist, einen Überblick über alle community-getriebenen Veranstaltungen aus dem (informations-)technischen Bereich in und um Hannover zu bieten." +
             "                Community-getrieben umfasst dabei sowohl \"User Groups\" im engeren Sinne, aber auch andere Veranstaltungen mit vorwiegend nicht-kommerziellem Hintergrund." +
-            "                Die Nutzung soll für alle Beteiligten so einfach wie möglich sein: Für Besucher ist keine Anmeldung erforderlich, und für die Veranstalter keine Pflege eines weiteren Kalenders.\r\n" +
+            "                Die Nutzung soll für alle Beteiligten so einfach wie möglich sein: Für Besucher ist keine Registrierung erforderlich, und für die Veranstalter keine Pflege eines weiteren Kalenders.\r\n" +
             "            </div>\r\n" +
             "        </div>\r\n" +
             "    </section>\r\n" +
@@ -91,6 +92,7 @@ public class IndexServlet extends HttpServlet {
             "                <h1 class=\"text book color theme\">Weitere Links</h1>\r\n" +
             "                <a href=\"http://ugrm.coderbyheart.de\" class=\"text bold color theme\">ugrm</a>: eine vergleichbare Initiative für die Region Rhein-Main<br/>\r\n" +
             "                <a href=\"https://github.com/Meet-Hub-Hannover\" class=\"text bold color theme\">github.com/Meet-Hub-Hannover</a>: Repository für diese Seite und die zugrundeliegende Web-Anwendung<br/>\r\n" +
+            "                <a href=\"https://www.softwerkskammer.org/groups/hannover-meetups\" class=\"text bold color theme\">www.softwerkskammer.org/groups/hannover-meetups</a>: Die Themengruppe bei der Softwerkskammer<br/>\r\n" +
             "            </div>\r\n" +
             "        </div>\r\n" +
             "    </section>\r\n" +
@@ -98,7 +100,7 @@ public class IndexServlet extends HttpServlet {
             "    <footer class=\"padding align center text small bck dark\">\r\n" +
             "        <div class=\"row\">\r\n" +
             "            <div class=\"column_12\">\r\n" +
-            "                <p>Meet-Hub Hannover ist eine Initiative von <a href=\"http://https://www.softwerkskammer.org/groups/hannover\" class=\"text bold color theme\">Softwerkskammer Hannover</a> und <a href=\"http://www.jug-h.de\" class=\"text bold color theme\">JUG Hannover</a></p>\r\n" +
+            "                <p>Meet-Hub Hannover ist eine Initiative von <a href=\"https://www.softwerkskammer.org/groups/hannover\" class=\"text bold color theme\">Softwerkskammer Hannover</a> und <a href=\"http://www.jug-h.de\" class=\"text bold color theme\">JUG Hannover</a></p>\r\n" +
             "                <a href=\"impressum.html\" class=\"text bold color theme\">Impressum</a>\r\n" +
             "            </div>\r\n" +
             "        </div>\r\n" +
