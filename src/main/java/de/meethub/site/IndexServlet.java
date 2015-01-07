@@ -1,3 +1,20 @@
+/**
+    This file is part of Meet-Hub-Hannover.
+
+    Meet-Hub-Hannover is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Meet-Hub-Hannover is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Meet-Hub-Hannover. If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package de.meethub.site;
 
 import java.io.IOException;
@@ -40,10 +57,16 @@ public class IndexServlet extends HttpServlet {
             "    <title>Meet-Hub Hannover</title>\r\n" +
             "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\" />\r\n" +
             "    <link rel=\"shortcut icon\" href=\"favicon.ico\" />" +
-            "    <link rel=\"stylesheet\" href=\"tuktuk/tuktuk.css\">\r\n" +
-            "    <link rel=\"stylesheet\" href=\"tuktuk/tuktuk.theme.default.css\">\r\n" +
+            "    <link rel=\"stylesheet\" href=\"tuktuk/tuktuk.css\" />\r\n" +
+            "    <link rel=\"stylesheet\" href=\"tuktuk/tuktuk.theme.default.css\" />\r\n" +
             "    <!-- TUKTUK.WIDGETS -->\r\n" +
-            "    <link rel=\"stylesheet\" href=\"tuktuk/tuktuk.icons.css\">\r\n" +
+            "    <link rel=\"stylesheet\" href=\"tuktuk/tuktuk.icons.css\" />\r\n" +
+            "    <link href=\"//cdn-images.mailchimp.com/embedcode/slim-081711.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n" +
+            "    <style type=\"text/css\">\r\n" +
+            "      #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }\r\n" +
+            "      /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.\r\n" +
+            "         We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */\r\n" +
+            "    </style>\r\n" +
             "</head>\r\n" +
             "<body>\r\n" +
             "    <section class=\"bck theme landing text center\">\r\n" +
@@ -80,13 +103,36 @@ public class IndexServlet extends HttpServlet {
             "    <section class=\"bck dark padding\">\r\n" +
             "        <div class=\"row text thin center\">\r\n" +
             "            <div class=\"column_12\">\r\n" +
-            "                <h1 class=\"text book color theme\">Beteiligte Gruppen</h1>\r\n" +
-            this.formatGroupLinks() +
+            "                <h1 class=\"text book color theme\">Veranstaltungs-Newsletter</h1>\r\n" +
+            "                Wöchentlicher Newsletter mit den in der nächsten Zeit anliegenden Terminen." +
+            "<!-- Begin MailChimp Signup Form -->\r\n" +
+            "<form action=\"//meet-hub-hannover.us9.list-manage.com/subscribe/post?u=00b6e9d7af18838b8580a03ee&amp;id=a76317b2eb\" method=\"post\" id=\"mc-embedded-subscribe-form\" name=\"mc-embedded-subscribe-form\" class=\"validate\" target=\"_blank\" novalidate>\r\n" +
+            "    <div id=\"mc_embed_signup_scroll\">\r\n" +
+            "    \r\n" +
+            "    <input type=\"email\" value=\"\" name=\"EMAIL\" class=\"email\" id=\"mce-EMAIL\" placeholder=\"email address\" required>\r\n" +
+            "    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\r\n" +
+            "    <div style=\"position: absolute; left: -5000px;\"><input type=\"text\" name=\"b_00b6e9d7af18838b8580a03ee_a76317b2eb\" tabindex=\"-1\" value=\"\"></div>\r\n" +
+            "    <div class=\"clear\"><input type=\"submit\" value=\"Für Newsletter registrieren\" name=\"subscribe\" id=\"mc-embedded-subscribe\" class=\"button\"></div>\r\n" +
+            "    </div>\r\n" +
+            "</form>\r\n" +
+            "\r\n" +
+            "<!--End mc_embed_signup-->" +
             "            </div>\r\n" +
             "        </div>\r\n" +
             "    </section>\r\n" +
             "\r\n" +
             "    <section class=\"bck light padding\">\r\n" +
+            "        <div class=\"row text thin center\">\r\n" +
+            "            <div class=\"column_12\">\r\n" +
+            "                <h1 class=\"text book color theme\">Beteiligte Gruppen</h1>\r\n" +
+            this.formatGroupLinks() +
+            "                <br/>\r\n" +
+            "                Wenn wir euch auch aufnehmen sollen, sendet eine E-Mail an \"webmaster at meet-hub-hannover.de\"." +
+            "            </div>\r\n" +
+            "        </div>\r\n" +
+            "    </section>\r\n" +
+            "\r\n" +
+            "    <section class=\"bck dark padding\">\r\n" +
             "        <div class=\"row text thin center\">\r\n" +
             "            <div class=\"column_12 color dark\">\r\n" +
             "                <h1 class=\"text book color theme\">Weitere Links</h1>\r\n" +
@@ -97,7 +143,7 @@ public class IndexServlet extends HttpServlet {
             "        </div>\r\n" +
             "    </section>\r\n" +
             "\r\n" +
-            "    <footer class=\"padding align center text small bck dark\">\r\n" +
+            "    <footer class=\"padding align center text small bck light\">\r\n" +
             "        <div class=\"row\">\r\n" +
             "            <div class=\"column_12\">\r\n" +
             "                <p>Meet-Hub Hannover ist eine Initiative von <a href=\"https://www.softwerkskammer.org/groups/hannover\" class=\"text bold color theme\">Softwerkskammer Hannover</a> und <a href=\"http://www.jug-h.de\" class=\"text bold color theme\">JUG Hannover</a></p>\r\n" +
