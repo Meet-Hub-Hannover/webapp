@@ -41,6 +41,7 @@ public class SwkAdapterServlet extends HttpServlet {
 
     @Override
     public void init(final ServletConfig config) throws ServletException {
+        super.init(config);
         try {
             this.baseUrl  = new URL(config.getInitParameter("base-url"));
         } catch (final MalformedURLException e) {

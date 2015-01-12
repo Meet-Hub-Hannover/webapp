@@ -63,6 +63,7 @@ public class AgilewhAdapterServlet extends HttpServlet {
 
     @Override
     public void init(final ServletConfig config) throws ServletException {
+        super.init(config);
         try {
             this.baseUrl  = new URL(config.getInitParameter("base-url"));
         } catch (final MalformedURLException e) {
@@ -91,7 +92,7 @@ public class AgilewhAdapterServlet extends HttpServlet {
         outputter.output(calendar, response.getWriter());
     }
 
-    private Calendar convertToCalendar(final Element table) throws SocketException, ParseException {
+    private Calendar convertToCalendar(final Element table) throws SocketException {
         final Calendar ret = new Calendar();
         ret.getProperties().add(new ProdId("-//Meet-Hub Hannover//agileWH//DE"));
         ret.getProperties().add(Version.VERSION_2_0);
@@ -100,15 +101,19 @@ public class AgilewhAdapterServlet extends HttpServlet {
         final SimpleDateFormat df = new SimpleDateFormat("dd.MM.yyyy");
         final NodeList trs = table.getElementsByTagName("tr");
         for (int i = 1; i < trs.getLength(); i++) {
-            final Element row = (Element) trs.item(i);
-            final NodeList tds = row.getElementsByTagName("td");
-            final String date = tds.item(1).getTextContent();
-            final String title = tds.item(2).getTextContent();
-            if (!date.trim().isEmpty()) {
-                final VEvent event = new VEvent(new Date(this.toMiddleOfDay(df.parse(date))), title);
-                final UidGenerator ug = new UidGenerator(ManagementFactory.getRuntimeMXBean().getName());
-                event.getProperties().add(ug.generateUid());
-                ret.getComponents().add(event);
+            try {
+                final Element row = (Element) trs.item(i);
+                final NodeList tds = row.getElementsByTagName("td");
+                final String date = tds.item(1).getTextContent();
+                final String title = tds.item(2).getTextContent();
+                if (!date.trim().isEmpty()) {
+                    final VEvent event = new VEvent(new Date(this.toMiddleOfDay(df.parse(date))), title);
+                    final UidGenerator ug = new UidGenerator(ManagementFactory.getRuntimeMXBean().getName());
+                    event.getProperties().add(ug.generateUid());
+                    ret.getComponents().add(event);
+                }
+            } catch (final ParseException e) {
+                this.log("date parsing error", e);
             }
         }
         return ret;
