@@ -152,8 +152,6 @@ public class IndexServlet extends HttpServlet {
             "        </div>\r\n" +
             "    </footer>\r\n" +
             "\r\n" +
-            "    <script src=\"http://code.jquery.com/jquery-1.9.1.min.js\"></script>\r\n" +
-            "    <script src=\"tuktuk/tuktuk.js\"></script>\r\n" +
             "</body>\r\n" +
             "</html>\r\n" +
             "";
