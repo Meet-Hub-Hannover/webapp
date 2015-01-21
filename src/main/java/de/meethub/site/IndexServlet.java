@@ -20,7 +20,9 @@ package de.meethub.site;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.List;
+import java.util.TimeZone;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -48,7 +50,7 @@ public class IndexServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         final Calendar mergedCalendar = CalendarUtil.loadMergedCalendar(this.getServletContext());
-        final Period nextPeriod = new Period(new DateTime(), new Dur(1));
+        final Period nextPeriod = new Period(new DateTime(startOfCurrentDay()), new Dur(1));
         final String content =
             "<!doctype html>\r\n" +
             "<html lang=\"de\">\r\n" +
@@ -156,6 +158,15 @@ public class IndexServlet extends HttpServlet {
             "</html>\r\n" +
             "";
         response.getWriter().write(content);
+    }
+
+    private static Date startOfCurrentDay() {
+        final GregorianCalendar cal = new GregorianCalendar(TimeZone.getTimeZone("Europe/Berlin"));
+        cal.set(GregorianCalendar.HOUR, 0);
+        cal.set(GregorianCalendar.MINUTE, 0);
+        cal.set(GregorianCalendar.SECOND, 0);
+        cal.set(GregorianCalendar.MILLISECOND, 0);
+        return cal.getTime();
     }
 
     private String formatNextEvents(final Calendar c, final Period nextPeriod) {
