@@ -18,6 +18,7 @@
 package de.meethub.site;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -87,7 +88,7 @@ public class IndexServlet extends HttpServlet {
             "                <h2>Danach</h2>\r\n" +
             this.formatLaterEvents(mergedCalendar, nextPeriod) +
             "                <p><a href=\"calendarView.html\" class=\"text bold color theme\">Kalenderansicht</a><br/>\r\n" +
-            "                <a href=\"mergedCalendar.ics\" class=\"text bold color theme\">Termine als iCal</a></p>\r\n" +
+            "                <a href=\"" + this.getWebcalUrl() + "\" class=\"text bold color theme\">Termine als iCal</a></p>\r\n" +
             "            </div>\r\n" +
             "        </div>\r\n" +
             "    </section>\r\n" +
@@ -138,9 +139,10 @@ public class IndexServlet extends HttpServlet {
             "        <div class=\"row text thin center\">\r\n" +
             "            <div class=\"column_12 color dark\">\r\n" +
             "                <h1 class=\"text book color theme\">Weitere Links</h1>\r\n" +
-            "                <a href=\"http://ugrm.coderbyheart.de\" class=\"text bold color theme\">ugrm</a>: eine vergleichbare Initiative für die Region Rhein-Main<br/>\r\n" +
-            "                <a href=\"https://github.com/Meet-Hub-Hannover\" class=\"text bold color theme\">github.com/Meet-Hub-Hannover</a>: Repository für diese Seite und die zugrundeliegende Web-Anwendung<br/>\r\n" +
             "                <a href=\"https://www.softwerkskammer.org/groups/hannover-meetups\" class=\"text bold color theme\">www.softwerkskammer.org/groups/hannover-meetups</a>: Die Themengruppe bei der Softwerkskammer<br/>\r\n" +
+            "                <a href=\"https://github.com/Meet-Hub-Hannover\" class=\"text bold color theme\">github.com/Meet-Hub-Hannover</a>: Repository für diese Seite und die zugrundeliegende Web-Anwendung<br/>\r\n" +
+            "                <a href=\"http://ugrm.coderbyheart.de\" class=\"text bold color theme\">ugrm</a>: eine vergleichbare Initiative für die Region Rhein-Main<br/>\r\n" +
+            "                <a href=\"http://usergroups.in-hannover.net\" class=\"text bold color theme\">usergroups.in-hannover.net</a>: ein Linkportal für Hannover<br/>\r\n" +
             "            </div>\r\n" +
             "        </div>\r\n" +
             "    </section>\r\n" +
@@ -160,6 +162,10 @@ public class IndexServlet extends HttpServlet {
         response.getWriter().write(content);
     }
 
+    private String getWebcalUrl() throws MalformedURLException {
+        return CalendarUtil.getMergedCalendarUtl(this.getServletContext()).toString().replaceFirst(".*://", "webcal://");
+    }
+
     private static Date startOfCurrentDay() {
         final GregorianCalendar cal = new GregorianCalendar(TimeZone.getTimeZone("Europe/Berlin"));
         cal.set(GregorianCalendar.HOUR, 0);
@@ -171,7 +177,7 @@ public class IndexServlet extends HttpServlet {
 
     private String formatNextEvents(final Calendar c, final Period nextPeriod) {
         final List<Event> filtered = Event.getEventsInPeriod(c, nextPeriod);
-        return filtered.isEmpty() ? "Keine Termine in der nächsten Woche" : this.formatEvents(filtered);
+        return filtered.isEmpty() ? "Keine Termine in den nächsten sieben Tagen" : this.formatEvents(filtered);
     }
 
     private String formatLaterEvents(final Calendar c, final Period nextPeriod) {

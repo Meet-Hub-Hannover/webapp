@@ -20,6 +20,7 @@ package de.meethub.util;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 
@@ -36,7 +37,11 @@ import net.fortuna.ical4j.model.ValidationException;
 public class CalendarUtil {
 
     public static Calendar loadMergedCalendar(final ServletContext ctx) throws IOException, ServletException {
-        return loadCalendar(new URL(ctx.getInitParameter("root.url") + "mergedCalendar.ics"));
+        return loadCalendar(getMergedCalendarUtl(ctx));
+    }
+
+    public static URL getMergedCalendarUtl(final ServletContext ctx) throws MalformedURLException {
+        return new URL(ctx.getInitParameter("root.url") + "mergedCalendar.ics");
     }
 
     public static Calendar loadCalendar(final URL url) throws IOException, ServletException {

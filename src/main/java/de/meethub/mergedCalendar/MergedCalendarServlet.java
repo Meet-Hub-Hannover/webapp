@@ -133,6 +133,8 @@ public class MergedCalendarServlet extends HttpServlet {
     private Calendar readCalendar(final URL url) throws IOException, ParserException {
         final CalendarBuilder b = new CalendarBuilder();
         final URLConnection conn = url.openConnection();
+        //ohne User-Agent kommt teilweise ein 403
+        conn.setRequestProperty("User-Agent", "Mozilla/5.0");
         try (InputStream in = conn.getInputStream()) {
             final String encoding = conn.getContentEncoding();
             return b.build(new InputStreamReader(in, encoding == null ? DEFAULT_CHARSET : encoding));
