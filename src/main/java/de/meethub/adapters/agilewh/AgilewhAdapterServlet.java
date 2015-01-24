@@ -18,15 +18,11 @@
 package de.meethub.adapters.agilewh;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.StringReader;
-import java.io.StringWriter;
 import java.lang.management.ManagementFactory;
 import java.net.MalformedURLException;
 import java.net.SocketException;
 import java.net.URL;
-import java.net.URLConnection;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
@@ -54,6 +50,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
+
+import de.meethub.util.UrlUtil;
 
 public class AgilewhAdapterServlet extends HttpServlet {
 
@@ -100,6 +98,7 @@ public class AgilewhAdapterServlet extends HttpServlet {
 
         final SimpleDateFormat df = new SimpleDateFormat("dd.MM.yyyy");
         final NodeList trs = table.getElementsByTagName("tr");
+        final UidGenerator ug = new UidGenerator(ManagementFactory.getRuntimeMXBean().getName());
         for (int i = 1; i < trs.getLength(); i++) {
             try {
                 final Element row = (Element) trs.item(i);
@@ -108,7 +107,6 @@ public class AgilewhAdapterServlet extends HttpServlet {
                 final String title = tds.item(2).getTextContent();
                 if (!date.trim().isEmpty()) {
                     final VEvent event = new VEvent(new Date(this.toMiddleOfDay(df.parse(date))), title);
-                    final UidGenerator ug = new UidGenerator(ManagementFactory.getRuntimeMXBean().getName());
                     event.getProperties().add(ug.generateUid());
                     ret.getComponents().add(event);
                 }
@@ -126,10 +124,7 @@ public class AgilewhAdapterServlet extends HttpServlet {
 
     private Document loadPage() throws SAXException, IOException, ParserConfigurationException {
         final DocumentBuilder b = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-        final URLConnection conn = this.baseUrl.openConnection();
-        //ohne den User-Agent zu setzen kommt ein 403
-        conn.setRequestProperty("User-Agent", "Mozilla/5.0");
-        String page = this.readAsString(conn);
+        String page = UrlUtil.readAsString(this.baseUrl);
         page = page.replace("&hellip;", "...");
         page = page.replace("&raquo;", "»");
         page = page.replace("&laquo;", "«");
@@ -139,19 +134,6 @@ public class AgilewhAdapterServlet extends HttpServlet {
         page = page.replaceAll("(?s)^.*<tbody", "<tbody");
         page = page.replaceAll("(?s)</tbody>.*$", "</tbody>");
         return b.parse(new InputSource(new StringReader(page)));
-    }
-
-    private String readAsString(final URLConnection conn) throws IOException {
-        final StringWriter buffer = new StringWriter();
-        try (InputStream in = conn.getInputStream()) {
-            final InputStreamReader r = new InputStreamReader(in,
-                    conn.getContentEncoding() == null ? "UTF-8" : conn.getContentEncoding());
-            int ch;
-            while ((ch = r.read()) >= 0) {
-                buffer.write(ch);
-            }
-        }
-        return buffer.toString();
     }
 
 }

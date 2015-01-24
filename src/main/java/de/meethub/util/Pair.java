@@ -39,4 +39,27 @@ public class Pair<T1, T2> {
         return this.value2;
     }
 
+    @Override
+    public String toString() {
+        return "(" + this.value1 + ", " + this.value2 + ")";
+    }
+
+    @Override
+    public int hashCode() {
+        return (this.value1 == null ? 123 : this.value1.hashCode()) ^ (this.value2 == null ? 5634 : this.value2.hashCode());
+    }
+
+    @Override
+    public boolean equals(final Object o) {
+        if (!(o instanceof Pair)) {
+            return false;
+        }
+        final Pair<?, ?> p = (Pair<?, ?>) o;
+        return sameOrEquals(this.value1, p.value1) && sameOrEquals(this.value2, p.value2);
+    }
+
+    private static boolean sameOrEquals(final Object o1, final Object o2) {
+        return o1 == o2 || (o1 != null && o1.equals(o2));
+    }
+
 }
