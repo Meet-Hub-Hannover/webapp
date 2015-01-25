@@ -46,6 +46,14 @@
             <param-value>https://www.xing.com/communities/groups/cocoaheads-hannover-1003453</param-value>
         </init-param>
     </servlet>
+    <servlet>
+        <servlet-name>adapter_leinelab</servlet-name>
+        <servlet-class>de.meethub.adapters.rss.RssAdapterServlet</servlet-class>
+        <init-param>
+            <param-name>base-url</param-name>
+            <param-value>http://cal.leinelab.de/rss/rss2.0.php?cal=&amp;cpath=&amp;rssview=month</param-value>
+        </init-param>
+    </servlet>
     <servlet-mapping>
         <servlet-name>mergedCalendar</servlet-name>
         <url-pattern>/mergedCalendar.ics</url-pattern>
@@ -73,6 +81,10 @@
     <servlet-mapping>
         <servlet-name>adapter_cocoaheads</servlet-name>
         <url-pattern>/cocoaheads.ics</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>adapter_leinelab</servlet-name>
+        <url-pattern>/leinelab.ics</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
