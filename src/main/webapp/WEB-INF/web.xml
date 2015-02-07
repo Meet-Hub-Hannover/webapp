@@ -54,6 +54,14 @@
             <param-value>http://cal.leinelab.de/rss/rss2.0.php?cal=&amp;cpath=&amp;rssview=month</param-value>
         </init-param>
     </servlet>
+    <servlet>
+        <servlet-name>adapter_hannoverjs</servlet-name>
+        <servlet-class>de.meethub.adapters.hannoverjs.HjsAdapterServlet</servlet-class>
+        <init-param>
+            <param-name>base-url</param-name>
+            <param-value>http://hannoverjs.github.io/hannoverjs.de/#/</param-value>
+        </init-param>
+    </servlet>
     <servlet-mapping>
         <servlet-name>mergedCalendar</servlet-name>
         <url-pattern>/mergedCalendar.ics</url-pattern>
@@ -85,6 +93,10 @@
     <servlet-mapping>
         <servlet-name>adapter_leinelab</servlet-name>
         <url-pattern>/leinelab.ics</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>adapter_hannoverjs</servlet-name>
+        <url-pattern>/hannoverjs.ics</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
