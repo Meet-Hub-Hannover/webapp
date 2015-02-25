@@ -99,6 +99,8 @@ public class IndexServlet extends HttpServlet {
             "                Ziel von \"Meet-Hub Hannover\" ist, einen Überblick über alle community-getriebenen Veranstaltungen aus dem (informations-)technischen Bereich in und um Hannover zu bieten." +
             "                Community-getrieben umfasst dabei sowohl \"User Groups\" im engeren Sinne, aber auch andere Veranstaltungen mit vorwiegend nicht-kommerziellem Hintergrund." +
             "                Die Nutzung soll für alle Beteiligten so einfach wie möglich sein: Für Besucher ist keine Registrierung erforderlich, und für die Veranstalter keine Pflege eines weiteren Kalenders.\r\n" +
+            "                <br/><br/>\r\n" +
+            "                Und weil Meet-Hub am besten funktioniert, wenn viele davon wissen: <a href=\"flyer.pdf\" class=\"text bold color theme\">Unser Flyer, zum Aufhängen in der Firmen-Kaffeeküche, am schwarzem Brett, u.s.w.</a>\r\n" +
             "            </div>\r\n" +
             "        </div>\r\n" +
             "    </section>\r\n" +
