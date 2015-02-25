@@ -10,8 +10,8 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="690"
-   height="487"
+   width="1052.3622"
+   height="744.09448"
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
@@ -50,16 +50,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="359.26301"
-     inkscape:cy="248.41941"
+     inkscape:cx="492.06146"
+     inkscape:cy="398.55398"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:snap-grids="true"
-     inkscape:window-width="1366"
-     inkscape:window-height="716"
-     inkscape:window-x="1272"
-     inkscape:window-y="248"
+     inkscape:window-width="1280"
+     inkscape:window-height="1002"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -125,7 +125,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -133,272 +133,276 @@
      inkscape:label="Ebene 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="matrix(2,0,0,2,-3.2349319,330.49365)">
+     transform="matrix(2,0,0,2,-3.2349319,587.58814)">
     <g
-       id="g3247"
-       transform="matrix(0.30233979,0,0,0.30233979,201.72045,91.104705)">
+       id="g3041"
+       transform="matrix(1.3931491,0,0,1.3931491,24.678012,-46.583294)">
       <g
-         transform="matrix(5.3571429,0,0,5.3571429,213.82887,-149.43441)"
-         id="g3216">
-        <path
-           inkscape:connector-curvature="0"
-           d="M 0,0 H 6 V 6 H 0 z M 0,2 H 6 M 0,4 H 6 M 2,0 V 6 M 4,0 v 6"
-           style="fill:none;stroke:#000000;stroke-width:0.1"
-           id="path3218" />
-        <circle
-           d="M 3.8,1 C 3.8,1.4418278 3.4418278,1.8 3,1.8 2.5581722,1.8 2.2,1.4418278 2.2,1 2.2,0.55817219 2.5581722,0.19999999 3,0.19999999 3.4418278,0.19999999 3.8,0.55817219 3.8,1 z"
-           sodipodi:ry="0.80000001"
-           sodipodi:rx="0.80000001"
-           sodipodi:cy="1"
-           sodipodi:cx="3"
-           cx="3"
-           cy="1"
-           r="0.80000001"
-           id="circle3220" />
-        <circle
-           d="M 5.8,3 C 5.8,3.4418278 5.4418278,3.8 5,3.8 4.5581722,3.8 4.2,3.4418278 4.2,3 4.2,2.5581722 4.5581722,2.2 5,2.2 5.4418278,2.2 5.8,2.5581722 5.8,3 z"
-           sodipodi:ry="0.80000001"
-           sodipodi:rx="0.80000001"
-           sodipodi:cy="3"
-           sodipodi:cx="5"
-           cx="5"
-           cy="3"
-           r="0.80000001"
-           id="circle3222" />
-        <circle
-           d="M 1.8,5 C 1.8,5.4418278 1.4418278,5.8 1,5.8 0.55817219,5.8 0.19999999,5.4418278 0.19999999,5 0.19999999,4.5581722 0.55817219,4.2 1,4.2 1.4418278,4.2 1.8,4.5581722 1.8,5 z"
-           sodipodi:ry="0.80000001"
-           sodipodi:rx="0.80000001"
-           sodipodi:cy="5"
-           sodipodi:cx="1"
-           cx="1"
-           cy="5"
-           r="0.80000001"
-           id="circle3224" />
-        <circle
-           d="M 3.8,5 C 3.8,5.4418278 3.4418278,5.8 3,5.8 2.5581722,5.8 2.2,5.4418278 2.2,5 2.2,4.5581722 2.5581722,4.2 3,4.2 3.4418278,4.2 3.8,4.5581722 3.8,5 z"
-           sodipodi:ry="0.80000001"
-           sodipodi:rx="0.80000001"
-           sodipodi:cy="5"
-           sodipodi:cx="3"
-           cx="3"
-           cy="5"
-           r="0.80000001"
-           id="circle3226" />
-        <circle
-           d="M 5.8,5 C 5.8,5.4418278 5.4418278,5.8 5,5.8 4.5581722,5.8 4.2,5.4418278 4.2,5 4.2,4.5581722 4.5581722,4.2 5,4.2 5.4418278,4.2 5.8,4.5581722 5.8,5 z"
-           sodipodi:ry="0.80000001"
-           sodipodi:rx="0.80000001"
-           sodipodi:cy="5"
-           sodipodi:cx="5"
-           cx="5"
-           cy="5"
-           r="0.80000001"
-           id="circle3228" />
-      </g>
-      <text
-         sodipodi:linespacing="125%"
-         id="text3243"
-         y="-117.59505"
-         x="252.03654"
-         style="font-size:48.75628662px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
-           y="-117.59505"
-           x="252.03654"
-           id="tspan3245"
-           sodipodi:role="line">LeineLab</tspan></text>
-    </g>
-    <g
-       id="g3035"
-       transform="translate(-0.68844927,-115.65877)">
-      <text
-         sodipodi:linespacing="125%"
-         id="text2989"
-         y="31.285683"
-         x="0.2857132"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Tahoma;-inkscape-font-specification:Tahoma"
-         xml:space="preserve"><tspan
-           y="31.285683"
-           x="0.2857132"
-           id="tspan2991"
-           sodipodi:role="line">MEET</tspan></text>
-      <text
-         transform="scale(1.012993,0.98717365)"
-         sodipodi:linespacing="125%"
-         id="text2993"
-         y="76.716408"
-         x="97.677406"
-         style="font-size:103.41847992px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Tahoma;-inkscape-font-specification:Tahoma"
-         xml:space="preserve"><tspan
-           y="76.716408"
-           x="97.677406"
-           id="tspan2995"
-           sodipodi:role="line">H</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text2997"
-         y="31.285683"
-         x="168.57144"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Tahoma;-inkscape-font-specification:Tahoma"
-         xml:space="preserve"><tspan
-           y="31.285683"
-           x="168.57144"
-           id="tspan2999"
-           sodipodi:role="line">UB</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text3001"
-         y="75.80162"
-         x="169.73346"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Tahoma;-inkscape-font-specification:Tahoma"
-         xml:space="preserve"><tspan
-           y="75.80162"
-           x="169.73346"
-           id="tspan3003"
-           sodipodi:role="line">ANNOVER</tspan></text>
-    </g>
-    <text
-       xml:space="preserve"
-       style="font-size:19.69797134px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="1.6267825"
-       y="-146.60329"
-       id="text3053"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3055"
-         x="1.6267825"
-         y="-146.60329"
-         style="font-size:9.35653687px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Tahoma;-inkscape-font-specification:Tahoma">User Groups und Vorträge in der Region</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:20.24745178px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="2.1229091"
-       y="-16.408924"
-       id="text3057"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         x="2.1229091"
-         y="-16.408924"
-         style="font-size:6.58042145px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Tahoma;-inkscape-font-specification:Tahoma"
-         id="tspan3065">Alle Veranstaltungen auf einen Blick</tspan><tspan
-         sodipodi:role="line"
-         x="2.1229091"
-         y="-8.1833973"
-         style="font-size:6.58042145px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Tahoma;-inkscape-font-specification:Tahoma"
-         id="tspan3067">Im Format Deiner Wahl: Webseite, iCalendar, Newsletter</tspan><tspan
-         sodipodi:role="line"
-         x="2.1229091"
-         y="0.042130083"
-         id="tspan3063"
-         style="font-size:6.58042145px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Tahoma;-inkscape-font-specification:Tahoma">Keine Registrierung nötig</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="264.74878"
-       y="-0.02965676"
-       id="text3073"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3075"
-         x="264.74878"
-         y="-0.02965676"
-         style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Tahoma;-inkscape-font-specification:Tahoma">meet-hub-hannover.de</tspan></text>
-    <image
-       y="0.29862204"
-       x="307.50131"
-       id="image3085"
-       xlink:href="file:///C:/workspace/Meethub-Hannover/src/main/flyer/qr_code.jpg"
-       height="39.242424"
-       width="39.242424" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 2.020202,388.23232 685.858588,0"
-       id="path3088"
-       inkscape:connector-curvature="0"
-       transform="matrix(0.5,0,0,0.5,1.6174659,-154.24682)" />
-    <image
-       y="46.58651"
-       x="4.2285733"
-       id="image3098"
-       xlink:href="file:///C:/workspace/Meethub-Hannover/src/main/flyer/Softwerkskammer.png"
-       height="24.819996"
-       width="96.797981" />
-    <image
-       y="56.227924"
-       x="218.15749"
-       id="image3170"
-       xlink:href="file:///C:/workspace/Meethub-Hannover/src/main/flyer/macusergrouplogo1.png"
-       height="21.828283"
-       width="83.954933" />
-    <image
-       y="41.828926"
-       x="125.8397"
-       id="image3181"
-       xlink:href="file:///C:/workspace/Meethub-Hannover/src/main/flyer/wordpress.jpeg"
-       height="17.272726"
-       width="17.272726" />
-    <text
-       xml:space="preserve"
-       style="font-size:11.42907333px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Consolas;-inkscape-font-specification:Consolas"
-       x="180.26791"
-       y="53.253311"
-       id="text3184"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3186"
-         x="180.26791"
-         y="53.253311"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas">#AgileWH</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="317.08212"
-       y="75.232971"
-       id="text3188"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3190"
-         x="317.08212"
-         y="75.232971"
-         style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Tahoma;-inkscape-font-specification:Tahoma">u. v. m.</tspan></text>
-    <g
-       id="g3280"
-       transform="matrix(0.10236447,0,0,0.10236447,106.64136,-36.345646)">
-      <g
-         inkscape:label="Hintergrund"
-         id="layer3">
-        <path
-           inkscape:export-ydpi="90"
-           inkscape:export-xdpi="90"
-           inkscape:connector-curvature="0"
-           id="path2993"
-           d="m -8.5203989,1019.7521 0,-51.15025 473.8775389,0 473.87754,0 0,51.15025 0,51.1503 -473.87754,0 -473.8775389,0 0,-51.1503 z"
-           style="fill:#ffffff;stroke:#ffffff;stroke-width:1.10855377;stroke-opacity:1" />
-      </g>
-      <g
-         inkscape:label="Text"
-         id="layer2">
+         transform="matrix(0.30233979,0,0,0.30233979,201.72045,91.104705)"
+         id="g3247">
+        <g
+           id="g3216"
+           transform="matrix(5.3571429,0,0,5.3571429,213.82887,-149.43441)">
+          <path
+             id="path3218"
+             style="fill:none;stroke:#000000;stroke-width:0.1"
+             d="M 0,0 H 6 V 6 H 0 z M 0,2 H 6 M 0,4 H 6 M 2,0 V 6 M 4,0 v 6"
+             inkscape:connector-curvature="0" />
+          <circle
+             id="circle3220"
+             r="0.80000001"
+             cy="1"
+             cx="3"
+             sodipodi:cx="3"
+             sodipodi:cy="1"
+             sodipodi:rx="0.80000001"
+             sodipodi:ry="0.80000001"
+             d="M 3.8,1 C 3.8,1.4418278 3.4418278,1.8 3,1.8 2.5581722,1.8 2.2,1.4418278 2.2,1 2.2,0.55817219 2.5581722,0.19999999 3,0.19999999 3.4418278,0.19999999 3.8,0.55817219 3.8,1 z" />
+          <circle
+             id="circle3222"
+             r="0.80000001"
+             cy="3"
+             cx="5"
+             sodipodi:cx="5"
+             sodipodi:cy="3"
+             sodipodi:rx="0.80000001"
+             sodipodi:ry="0.80000001"
+             d="M 5.8,3 C 5.8,3.4418278 5.4418278,3.8 5,3.8 4.5581722,3.8 4.2,3.4418278 4.2,3 4.2,2.5581722 4.5581722,2.2 5,2.2 5.4418278,2.2 5.8,2.5581722 5.8,3 z" />
+          <circle
+             id="circle3224"
+             r="0.80000001"
+             cy="5"
+             cx="1"
+             sodipodi:cx="1"
+             sodipodi:cy="5"
+             sodipodi:rx="0.80000001"
+             sodipodi:ry="0.80000001"
+             d="M 1.8,5 C 1.8,5.4418278 1.4418278,5.8 1,5.8 0.55817219,5.8 0.19999999,5.4418278 0.19999999,5 0.19999999,4.5581722 0.55817219,4.2 1,4.2 1.4418278,4.2 1.8,4.5581722 1.8,5 z" />
+          <circle
+             id="circle3226"
+             r="0.80000001"
+             cy="5"
+             cx="3"
+             sodipodi:cx="3"
+             sodipodi:cy="5"
+             sodipodi:rx="0.80000001"
+             sodipodi:ry="0.80000001"
+             d="M 3.8,5 C 3.8,5.4418278 3.4418278,5.8 3,5.8 2.5581722,5.8 2.2,5.4418278 2.2,5 2.2,4.5581722 2.5581722,4.2 3,4.2 3.4418278,4.2 3.8,4.5581722 3.8,5 z" />
+          <circle
+             id="circle3228"
+             r="0.80000001"
+             cy="5"
+             cx="5"
+             sodipodi:cx="5"
+             sodipodi:cy="5"
+             sodipodi:rx="0.80000001"
+             sodipodi:ry="0.80000001"
+             d="M 5.8,5 C 5.8,5.4418278 5.4418278,5.8 5,5.8 4.5581722,5.8 4.2,5.4418278 4.2,5 4.2,4.5581722 4.5581722,4.2 5,4.2 5.4418278,4.2 5.8,4.5581722 5.8,5 z" />
+        </g>
         <text
-           inkscape:export-ydpi="90"
-           inkscape:export-xdpi="90"
-           transform="scale(0.73757663,1.3557913)"
+           xml:space="preserve"
+           style="font-size:48.75628662px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+           x="252.03654"
+           y="-117.59505"
+           id="text3243"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3245"
+             x="252.03654"
+             y="-117.59505"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">LeineLab</tspan></text>
+      </g>
+      <g
+         transform="translate(-0.68844927,-115.65877)"
+         id="g3035">
+        <text
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Tahoma;-inkscape-font-specification:Tahoma"
+           x="0.2857132"
+           y="31.285683"
+           id="text2989"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan2991"
+             x="0.2857132"
+             y="31.285683">MEET</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:103.41847992px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Tahoma;-inkscape-font-specification:Tahoma"
+           x="97.677406"
+           y="76.716408"
+           id="text2993"
            sodipodi:linespacing="125%"
-           id="text2986"
-           y="775.1106"
-           x="-1.4634842"
-           style="font-size:85.63473511px;font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial Black;-inkscape-font-specification:'Arial Black, Heavy'"
-           xml:space="preserve"><tspan
-             dx="0"
-             style="font-size:85.63473511px;font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:-3.93681908px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Arial Black;-inkscape-font-specification:'Arial Black, Heavy'"
-             y="775.1106"
+           transform="scale(1.012993,0.98717365)"><tspan
+             sodipodi:role="line"
+             id="tspan2995"
+             x="97.677406"
+             y="76.716408">H</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Tahoma;-inkscape-font-specification:Tahoma"
+           x="168.57144"
+           y="31.285683"
+           id="text2997"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan2999"
+             x="168.57144"
+             y="31.285683">UB</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Tahoma;-inkscape-font-specification:Tahoma"
+           x="169.73346"
+           y="75.80162"
+           id="text3001"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3003"
+             x="169.73346"
+             y="75.80162">ANNOVER</tspan></text>
+      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3053"
+         y="-146.60329"
+         x="1.6267825"
+         style="font-size:19.69797134px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:9.35653687px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Tahoma;-inkscape-font-specification:Tahoma"
+           y="-146.60329"
+           x="1.6267825"
+           id="tspan3055"
+           sodipodi:role="line">User Groups und Vorträge in der Region</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3057"
+         y="-16.408924"
+         x="2.1229091"
+         style="font-size:20.24745178px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           id="tspan3065"
+           style="font-size:6.58042145px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Tahoma;-inkscape-font-specification:Tahoma"
+           y="-16.408924"
+           x="2.1229091"
+           sodipodi:role="line">Alle Veranstaltungen auf einen Blick</tspan><tspan
+           id="tspan3067"
+           style="font-size:6.58042145px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Tahoma;-inkscape-font-specification:Tahoma"
+           y="-8.1833973"
+           x="2.1229091"
+           sodipodi:role="line">Im Format Deiner Wahl: Webseite, iCalendar, Newsletter</tspan><tspan
+           style="font-size:6.58042145px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Tahoma;-inkscape-font-specification:Tahoma"
+           id="tspan3063"
+           y="0.042129517"
+           x="2.1229091"
+           sodipodi:role="line">Keine Registrierung nötig</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3073"
+         y="-0.02965676"
+         x="264.74878"
+         style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Tahoma;-inkscape-font-specification:Tahoma"
+           y="-0.02965676"
+           x="264.74878"
+           id="tspan3075"
+           sodipodi:role="line">meet-hub-hannover.de</tspan></text>
+      <image
+         width="39.242424"
+         height="39.242424"
+         xlink:href="file:///C:/workspace/Meethub-Hannover/src/main/flyer/qr_code.jpg"
+         id="image3085"
+         x="307.50131"
+         y="0.29862204" />
+      <path
+         transform="matrix(0.5,0,0,0.5,1.6174659,-154.24682)"
+         inkscape:connector-curvature="0"
+         id="path3088"
+         d="m 2.020202,388.23232 685.858588,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <image
+         width="96.797981"
+         height="24.819996"
+         xlink:href="file:///C:/workspace/Meethub-Hannover/src/main/flyer/Softwerkskammer.png"
+         id="image3098"
+         x="4.2285733"
+         y="46.58651" />
+      <image
+         width="83.954933"
+         height="21.828283"
+         xlink:href="file:///C:/workspace/Meethub-Hannover/src/main/flyer/macusergrouplogo1.png"
+         id="image3170"
+         x="218.15749"
+         y="56.227924" />
+      <image
+         width="17.272726"
+         height="17.272726"
+         xlink:href="file:///C:/workspace/Meethub-Hannover/src/main/flyer/wordpress.jpeg"
+         id="image3181"
+         x="125.8397"
+         y="41.828926" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3184"
+         y="53.253311"
+         x="180.26791"
+         style="font-size:11.42907333px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Consolas;-inkscape-font-specification:Consolas"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas"
+           y="53.253311"
+           x="180.26791"
+           id="tspan3186"
+           sodipodi:role="line">#AgileWH</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3188"
+         y="75.232971"
+         x="317.08212"
+         style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Tahoma;-inkscape-font-specification:Tahoma"
+           y="75.232971"
+           x="317.08212"
+           id="tspan3190"
+           sodipodi:role="line">u. v. m.</tspan></text>
+      <g
+         transform="matrix(0.10236447,0,0,0.10236447,106.64136,-36.345646)"
+         id="g3280">
+        <g
+           id="layer3"
+           inkscape:label="Hintergrund">
+          <path
+             style="fill:#ffffff;stroke:#ffffff;stroke-width:1.10855377;stroke-opacity:1"
+             d="m -8.5203989,1019.7521 0,-51.15025 473.8775389,0 473.87754,0 0,51.15025 0,51.1503 -473.87754,0 -473.8775389,0 0,-51.1503 z"
+             id="path2993"
+             inkscape:connector-curvature="0"
+             inkscape:export-xdpi="90"
+             inkscape:export-ydpi="90" />
+        </g>
+        <g
+           id="layer2"
+           inkscape:label="Text">
+          <text
+             xml:space="preserve"
+             style="font-size:85.63473511px;font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial Black;-inkscape-font-specification:'Arial Black, Heavy'"
              x="-1.4634842"
-             id="tspan2988"
-             sodipodi:role="line"><tspan
-   id="tspan3855"
-   style="fill:#019ee5;fill-opacity:1">JAVA</tspan>USERGROUP<tspan
-   id="tspan3861"
-   style="fill:#e3010f;fill-opacity:1">HANNOVER</tspan></tspan></text>
+             y="775.1106"
+             id="text2986"
+             sodipodi:linespacing="125%"
+             transform="scale(0.73757663,1.3557913)"
+             inkscape:export-xdpi="90"
+             inkscape:export-ydpi="90"><tspan
+               sodipodi:role="line"
+               id="tspan2988"
+               x="-1.4634842"
+               y="775.1106"
+               style="font-size:85.63473511px;font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:-3.93681908px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Arial Black;-inkscape-font-specification:'Arial Black, Heavy'"
+               dx="0"><tspan
+   style="fill:#019ee5;fill-opacity:1"
+   id="tspan3855">JAVA</tspan>USERGROUP<tspan
+   style="fill:#e3010f;fill-opacity:1"
+   id="tspan3861">HANNOVER</tspan></tspan></text>
+        </g>
       </g>
     </g>
   </g>
