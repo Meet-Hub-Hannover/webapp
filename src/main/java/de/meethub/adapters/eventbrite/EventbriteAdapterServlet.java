@@ -108,21 +108,36 @@ public class EventbriteAdapterServlet extends HttpServlet {
     }
 
     private static Date parseDate(final String dateElementContent) throws ParseException {
-        final Pattern p = Pattern.compile("([A-Za-z]+) ([0-9]+), ([0-9]+) ([0-9]+):([0-9]+) (PM|AM).*");
-        final Matcher m = p.matcher(dateElementContent);
-        if (!m.matches()) {
-            throw new ParseException("date not in expected format: " + dateElementContent, 0);
+        final Pattern p1 = Pattern.compile("([A-Za-z]+) ([0-9]+), ([0-9]+) ([0-9]+):([0-9]+) (PM|AM).*");
+        Matcher m;
+        m = p1.matcher(dateElementContent);
+        if (m.matches()) {
+            final int month = convertMonth(m.group(1).toLowerCase());
+            final int day = Integer.parseInt(m.group(2));
+            final int year = Integer.parseInt(m.group(3));
+            final int hour = Integer.parseInt(m.group(4));
+            final int minute = Integer.parseInt(m.group(5));
+            final boolean pm = m.group(6).equalsIgnoreCase("PM");
+            final GregorianCalendar currentDate = new GregorianCalendar();
+            currentDate.setTimeZone(TimeZone.getTimeZone("Europe/Berlin"));
+            currentDate.set(year, month - 1, day, hour + (pm ? 12 : 0), minute, 0);
+            return currentDate.getTime();
         }
-        final int month = convertMonth(m.group(1).toLowerCase());
-        final int day = Integer.parseInt(m.group(2));
-        final int year = Integer.parseInt(m.group(3));
-        final int hour = Integer.parseInt(m.group(4));
-        final int minute = Integer.parseInt(m.group(5));
-        final boolean pm = m.group(6).equalsIgnoreCase("PM");
-        final GregorianCalendar currentDate = new GregorianCalendar();
-        currentDate.setTimeZone(TimeZone.getTimeZone("Europe/Berlin"));
-        currentDate.set(year, month - 1, day, hour + (pm ? 12 : 0), minute, 0);
-        return currentDate.getTime();
+        final Pattern p2 = Pattern.compile("[A-Za-z]+, ([A-Za-z]+) ([0-9]+) ([0-9]+):([0-9]+) (PM|AM).*");
+        m = p2.matcher(dateElementContent);
+        if (m.matches()) {
+            final int month = convertMonth(m.group(1).toLowerCase());
+            final int day = Integer.parseInt(m.group(2));
+            final int year = new GregorianCalendar().get(GregorianCalendar.YEAR);
+            final int hour = Integer.parseInt(m.group(3));
+            final int minute = Integer.parseInt(m.group(4));
+            final boolean pm = m.group(5).equalsIgnoreCase("PM");
+            final GregorianCalendar currentDate = new GregorianCalendar();
+            currentDate.setTimeZone(TimeZone.getTimeZone("Europe/Berlin"));
+            currentDate.set(year, month - 1, day, hour + (pm ? 12 : 0), minute, 0);
+            return currentDate.getTime();
+        }
+        throw new ParseException("date not in expected format: " + dateElementContent, 0);
     }
 
     private static int convertMonth(final String monthName) throws ParseException {

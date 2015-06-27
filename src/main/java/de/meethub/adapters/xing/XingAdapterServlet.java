@@ -19,15 +19,9 @@ package de.meethub.adapters.xing;
 
 import java.io.IOException;
 import java.lang.management.ManagementFactory;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.ArrayList;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.List;
-import java.util.TimeZone;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -43,47 +37,54 @@ import net.fortuna.ical4j.model.property.CalScale;
 import net.fortuna.ical4j.model.property.ProdId;
 import net.fortuna.ical4j.model.property.Version;
 import net.fortuna.ical4j.util.UidGenerator;
-import de.meethub.util.Pair;
-import de.meethub.util.UrlUtil;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class XingAdapterServlet extends HttpServlet {
 
     private static final long serialVersionUID = -2799550772726246839L;
 
-    private URL baseUrl;
+    private String baseUrl;
 
     @Override
     public void init(final ServletConfig config) throws ServletException {
         super.init(config);
-        try {
-            this.baseUrl  = new URL(config.getInitParameter("base-url"));
-        } catch (final MalformedURLException e) {
-            throw new ServletException(e);
-        }
+        this.baseUrl  = config.getInitParameter("base-url");
     }
 
     @Override
     protected void doGet(final HttpServletRequest request, final HttpServletResponse response)
         throws ServletException, IOException {
 
+        final WebDriver d = new HtmlUnitDriver(true);
         try {
-            final Calendar calendar = this.createCalendar();
+            d.get(this.baseUrl);
+            new WebDriverWait(d, 10).until(ExpectedConditions.presenceOfElementLocated(By.className("event-preview")));
+            final Calendar calendar = this.convertToCalendar(d);
             final CalendarOutputter outputter = new CalendarOutputter();
             response.setContentType("text/calendar;charset=UTF-8");
             outputter.output(calendar, response.getWriter());
-        } catch (final ValidationException e1) {
-            throw new ServletException(e1);
+        } catch (final ValidationException | ParseException e) {
+            throw new ServletException(e);
+        } finally {
+            d.close();
         }
     }
 
-    private Calendar createCalendar() throws IOException {
+    private Calendar convertToCalendar(final WebDriver d) throws IOException, ParseException, ServletException {
         final Calendar ret = new Calendar();
         ret.getProperties().add(new ProdId("-//Meet-Hub Hannover//xing//DE"));
         ret.getProperties().add(Version.VERSION_2_0);
         ret.getProperties().add(CalScale.GREGORIAN);
 
-        for (final Pair<String, java.util.Date> eventData : extractEvents(UrlUtil.readAsString(this.baseUrl))) {
-            final VEvent event = new VEvent(new net.fortuna.ical4j.model.DateTime(eventData.getSecond()), eventData.getFirst());
+        for (final WebElement eventElement : d.findElements(By.className("event-preview"))) {
+            final VEvent event = new VEvent(new net.fortuna.ical4j.model.DateTime(
+                    this.extractStartTime(eventElement)), this.extractTitle(eventElement));
             final UidGenerator ug = new UidGenerator(ManagementFactory.getRuntimeMXBean().getName());
             event.getProperties().add(ug.generateUid());
             ret.getComponents().add(event);
@@ -92,25 +93,18 @@ public class XingAdapterServlet extends HttpServlet {
         return ret;
     }
 
-    public static List<Pair<String, Date>> extractEvents(final String content) {
-        final Pattern pattern = Pattern.compile(
-                ">([^<]+)</a>.{1,30}[Mo|Di|Mi|Do|Fr|Sa|So], (\\d\\d)\\.(\\d\\d)\\.(\\d\\d\\d\\d), (\\d\\d):(\\d\\d)",
-                Pattern.DOTALL);
-        final Matcher matcher = pattern.matcher(content);
-        final List<Pair<String, Date>> ret = new ArrayList<>();
-        while (matcher.find()) {
-            final GregorianCalendar date = new GregorianCalendar(TimeZone.getTimeZone("Europe/Berlin"));
-            date.clear();
-            date.set(GregorianCalendar.DAY_OF_MONTH, Integer.parseInt(matcher.group(2)));
-            date.set(GregorianCalendar.MONTH, Integer.parseInt(matcher.group(3)) - 1);
-            date.set(GregorianCalendar.YEAR, Integer.parseInt(matcher.group(4)));
-            date.set(GregorianCalendar.HOUR, Integer.parseInt(matcher.group(5)));
-            date.set(GregorianCalendar.MINUTE, Integer.parseInt(matcher.group(6)));
-            ret.add(Pair.create(
-                    matcher.group(1),
-                    date.getTime()));
+    private String extractTitle(final WebElement eventElement) {
+        return eventElement.findElement(By.className("media-preview-link")).getText().trim();
+    }
+
+    private Date extractStartTime(final WebElement eventElement) throws ParseException, ServletException {
+        for (final WebElement meta : eventElement.findElements(By.tagName("meta"))) {
+            if ("startDate".equals(meta.getAttribute("itemprop"))) {
+                final SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssXXX");
+                return f.parse(meta.getAttribute("content"));
+            }
         }
-        return ret;
+        throw new ServletException("could not extract date from " + eventElement);
     }
 
 }

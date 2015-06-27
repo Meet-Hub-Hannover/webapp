@@ -103,8 +103,8 @@ public class AgilewhAdapterServlet extends HttpServlet {
             try {
                 final Element row = (Element) trs.item(i);
                 final NodeList tds = row.getElementsByTagName("td");
-                final String date = tds.item(1).getTextContent();
-                final String title = tds.item(2).getTextContent();
+                final String date = trimWithNbsp(tds.item(1).getTextContent());
+                final String title = trimWithNbsp(tds.item(2).getTextContent());
                 if (!date.trim().isEmpty()) {
                     final VEvent event = new VEvent(new Date(this.toMiddleOfDay(df.parse(date))), title);
                     event.getProperties().add(ug.generateUid());
@@ -115,6 +115,10 @@ public class AgilewhAdapterServlet extends HttpServlet {
             }
         }
         return ret;
+    }
+
+    private static String trimWithNbsp(final String s) {
+        return s.replaceFirst("^[\\x00-\\x200\\xA0]+", "").replaceFirst("[\\x00-\\x20\\xA0]+$", "");
     }
 
     private java.util.Date toMiddleOfDay(final java.util.Date parsed) {
