@@ -34,6 +34,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.xml.sax.SAXException;
+
+import de.meethub.groups.Group;
+import de.meethub.util.Pair;
 import net.fortuna.ical4j.data.CalendarBuilder;
 import net.fortuna.ical4j.data.CalendarOutputter;
 import net.fortuna.ical4j.data.ParserException;
@@ -45,11 +49,7 @@ import net.fortuna.ical4j.model.component.VEvent;
 import net.fortuna.ical4j.model.property.Summary;
 import net.fortuna.ical4j.model.property.Url;
 import net.fortuna.ical4j.model.property.XProperty;
-
-import org.xml.sax.SAXException;
-
-import de.meethub.groups.Group;
-import de.meethub.util.Pair;
+import net.fortuna.ical4j.util.CompatibilityHints;
 
 public class MergedCalendarServlet extends HttpServlet {
 
@@ -83,6 +83,9 @@ public class MergedCalendarServlet extends HttpServlet {
     }
 
     private Calendar mergeCalendars(final List<Pair<URL, Group>> urls) throws URISyntaxException {
+        //noetig wegen ical4j-Bug #167
+        CompatibilityHints.setHintEnabled(CompatibilityHints.KEY_RELAXED_PARSING, true);
+
         Calendar merged = null;
         for (final Pair<URL, Group> url : urls) {
             try {

@@ -33,6 +33,9 @@ import org.xml.sax.SAXException;
 
 import edu.emory.mathcs.backport.java.util.Arrays;
 
+/**
+ * Achtung: Kopie dieser Klasse existiert im Mailer.
+ */
 public class Group {
 
     private static final String USERGROUP_DIR_PARAM = "usergroup.directory";
