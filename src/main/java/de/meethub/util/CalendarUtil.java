@@ -33,6 +33,7 @@ import net.fortuna.ical4j.data.CalendarOutputter;
 import net.fortuna.ical4j.data.ParserException;
 import net.fortuna.ical4j.model.Calendar;
 import net.fortuna.ical4j.model.ValidationException;
+import net.fortuna.ical4j.util.CompatibilityHints;
 
 public class CalendarUtil {
 
@@ -45,6 +46,8 @@ public class CalendarUtil {
     }
 
     public static Calendar loadCalendar(final URL url) throws IOException, ServletException {
+        //noetig wegen ical4j-Bug #167
+        CompatibilityHints.setHintEnabled(CompatibilityHints.KEY_RELAXED_PARSING, true);
         final CalendarBuilder b = new CalendarBuilder();
         final URLConnection conn = url.openConnection();
         try (InputStream in = conn.getInputStream()) {

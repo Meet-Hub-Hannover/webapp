@@ -23,14 +23,6 @@
         <servlet-class>de.meethub.site.IndexServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>adapter_agilewh</servlet-name>
-        <servlet-class>de.meethub.adapters.agilewh.AgilewhAdapterServlet</servlet-class>
-        <init-param>
-            <param-name>base-url</param-name>
-            <param-value>http://www.agilewh.de/themenbacklog/</param-value>
-        </init-param>
-    </servlet>
-    <servlet>
         <servlet-name>adapter_swk</servlet-name>
         <servlet-class>de.meethub.adapters.swk.SwkAdapterServlet</servlet-class>
         <init-param>
@@ -93,10 +85,6 @@
     <servlet-mapping>
         <servlet-name>index</servlet-name>
         <url-pattern>/index.php</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>adapter_agilewh</servlet-name>
-        <url-pattern>/agilewh.ics</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>adapter_swk</servlet-name>
