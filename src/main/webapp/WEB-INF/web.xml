@@ -48,10 +48,10 @@
     </servlet>
     <servlet>
         <servlet-name>adapter_hannoverjs</servlet-name>
-        <servlet-class>de.meethub.adapters.hannoverjs.HjsAdapterServlet</servlet-class>
+        <servlet-class>de.meethub.adapters.hannoverjs.HjsJsonAdapterServlet</servlet-class>
         <init-param>
             <param-name>base-url</param-name>
-            <param-value>http://hannoverjs.github.io/hannoverjs.de/#/</param-value>
+            <param-value>https://hannoverjs-api.now.sh/events</param-value>
         </init-param>
     </servlet>
     <servlet>
